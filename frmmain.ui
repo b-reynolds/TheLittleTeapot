@@ -337,8 +337,6 @@ QMenu::separator {
 	background-color: black;
 }</string>
       </property>
-      <zorder>bottomWidget</zorder>
-      <zorder>widget</zorder>
      </widget>
     </item>
     <item>
