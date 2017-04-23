@@ -6,12 +6,19 @@
 #include <QColor>
 #include <QDebug>
 
+/**
+ * @brief Constructor (optional parent Widget parameter)
+ * @param parent parent Widget
+ */
 FrmMain::FrmMain(QWidget *parent) : QMainWindow(parent), ui(new Ui::FrmMain)
 {
     ui->setupUi(this);
     initialize();
 }
 
+/**
+ * @brief Deconstructor frees memory usage
+ */
 FrmMain::~FrmMain()
 {
     delete ui;
@@ -120,6 +127,9 @@ void FrmMain::showMessageBox(const QString &message, const QString &caption, con
     messageBox.exec();
 }
 
+/**
+ * @brief Sets all of the point size menu item's checked values to false
+ */
 void FrmMain::disableActionChecks()
 {
     ui->actPointSize1->setChecked(false);
@@ -129,6 +139,9 @@ void FrmMain::disableActionChecks()
     ui->actPointSize5->setChecked(false);
 }
 
+/**
+ * @brief Initializes the application and loads the default teapot model
+ */
 void FrmMain::initialize()
 {
     Model model;

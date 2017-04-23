@@ -13,6 +13,7 @@ class Model;
  */
 class ModelViewer : public QGLWidget
 {
+    /* Q_OBJECT macro allows usage of slots */
     Q_OBJECT
 
 public:
@@ -69,25 +70,44 @@ protected:
 
 private:
 
-    Model mModel;
-
+    /* Default background colour */
     const QColor cBackgroundColourDefault = QColor(4.001f, 27.999f, 49.001f, 255.0f);
+
+    /* Default foreground colour */
     const QColor cForegroundColourDefault = QColor(160.0f, 189.0f, 255.0f, 255.0f);
+
+    /* Default point size */
     const GLfloat cPointSizeDefault = 1.0f;
+
+    /* Default zoom amount */
     const GLdouble cZoomAmountDefault = 1.0;
+
+    /* Default render mode */
     const RenderMode cRenderModeDefault = ePointCloud;
+
+    /* Default near clipping plane */
     const GLdouble cNear = 1.0;
+
+    /* Default far clipping plane */
     const GLdouble cFar = 15.0;
 
+    /* Loaded model */
+    Model mModel;
+
+    /* Current background colour */
     QColor mBackgroundColour;
+
+    /* Current foreground colour */
     QColor mForegroundColour;
 
+    /* Current point size */
     GLfloat mPointSize;
 
+    /* Current zoom amount */
     GLdouble mZoomAmount;
 
+    /* Current render mode */
     RenderMode mRenderMode;
-
 
 };
 

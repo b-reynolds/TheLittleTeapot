@@ -39,7 +39,7 @@ bool Model::loadFromFile(const QString &filePath)
     while(!inputStream.atEnd())
     {
         QString currentLine = inputStream.readLine();
-        QStringList lineSegments = currentLine.split(" ");
+        QStringList lineSegments = currentLine.split(" ", QString::SkipEmptyParts);
         lineNumber++;
 
         if(lineSegments.isEmpty())
@@ -84,7 +84,7 @@ bool Model::loadFromFile(const QString &filePath)
         }
 
         mVertices.push_back(QVector3D(values[0], values[1], values[2]));
-        //qDebug() << "Info: Line proccessed succesfully (" << lineNumber << ")";
+        qDebug() << "Info: Line proccessed succesfully (" << lineNumber << ")";
     }
 
     inputFile.close();

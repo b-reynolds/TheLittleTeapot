@@ -1,1 +1,1 @@
-# TheLittleTeapot
+# Qt/OpenGL OBJ Model Viewer
