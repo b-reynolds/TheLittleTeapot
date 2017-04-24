@@ -129,7 +129,7 @@ void ModelViewer::initializeGL()
  */
 void ModelViewer::paintGL()
 {
-    glClearColor(mBackgroundColour.red() / 255.0f, BackgroundColour.green(), mBackgroundColour.blue() / 255.0f, mBackgroundColour.alpha();
+    glClearColor(mBackgroundColour.red() / 255.0f, mBackgroundColour.green() / 255.0f, mBackgroundColour.blue() / 255.0f, mBackgroundColour.alpha() / 255.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glMatrixMode(GL_PROJECTION);
