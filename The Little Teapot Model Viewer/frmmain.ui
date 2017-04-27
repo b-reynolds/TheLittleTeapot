@@ -16,6 +16,12 @@
     <height>432</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>881</width>
+    <height>432</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Little Teapot</string>
   </property>
@@ -324,19 +330,51 @@ QMenu::separator {
      <number>0</number>
     </property>
     <item>
-     <widget class="ModelViewer" name="modelViewer" native="true">
+     <widget class="QWidget" name="Box" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="minimumSize">
        <size>
         <width>741</width>
-        <height>391</height>
+        <height>389</height>
        </size>
       </property>
-      <property name="styleSheet">
-       <string notr="true">QWidget
-{
-	background-color: black;
-}</string>
-      </property>
+      <widget class="ModelViewer" name="modelViewer" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>371</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="ModelViewer" name="modelViewer2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>0</y>
+         <width>371</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
      </widget>
     </item>
     <item>
@@ -465,6 +503,11 @@ QMenu::separator {
          <double>0.000000000000000</double>
         </property>
        </widget>
+       <zorder>dsbPositionX</zorder>
+       <zorder>lblPositionY</zorder>
+       <zorder>lblPositionX</zorder>
+       <zorder>dsbPositionY</zorder>
+       <zorder>widget_2</zorder>
       </widget>
       <widget class="QGroupBox" name="grpRotation">
        <property name="geometry">
@@ -634,6 +677,13 @@ QMenu::separator {
          <string>Z:</string>
         </property>
        </widget>
+       <zorder>dsbRotationX</zorder>
+       <zorder>lblRotationY</zorder>
+       <zorder>lblRotationX</zorder>
+       <zorder>dsbRotationY</zorder>
+       <zorder>dsbRotationZ</zorder>
+       <zorder>lblRotationZ</zorder>
+       <zorder>modelViewer</zorder>
       </widget>
       <widget class="QGroupBox" name="grpZoom">
        <property name="geometry">
